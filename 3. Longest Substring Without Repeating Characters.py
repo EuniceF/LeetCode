@@ -13,3 +13,8 @@ class Solution:
                 maxlen = max(maxlen, i - start + 1)
             used[val] = i
         return maxlen
+# Tips:
+# How to check that the char shows before in the new start substring?
+# e.g. "abba" -> in "ba", 'a' only happens once, how to avoid counting twice for 'a' cuz 'a' also happens in index 0.
+# solutions:
+# In if statement, we need to add "start <= used[va]" to check whether the char happens before in the new start substring.
